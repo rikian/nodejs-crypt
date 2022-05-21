@@ -1,12 +1,12 @@
 const crypto = require("crypto");
 const algorithm = "aes-256-ctr";
-const secretKey = "LMFgd664399g6H44MKH88io99DFgSH5b"; //your salt or secrect key (32 string)
+const secretKey = "LMFgd664399g6H44MKH88io99DFgSH5b"; //your salt or secrect key (32 char)
 const iv = crypto.randomBytes(16);
 
 /**
  * encrypt
  * @param {object} user
- * @returns false if failed, object with key and pair if true
+ * @returns false if failed, object with key and value if true
  */
 function encrypt(data) {
   try {
@@ -15,10 +15,9 @@ function encrypt(data) {
     const encrypted = Buffer.concat([cipher.update(user), cipher.final()]);
     return {
       key: iv.toString("hex"),
-      pair: encrypted.toString("hex"),
+      value: encrypted.toString("hex"),
     };
   } catch (error) {
-    console.log(error.message);
     return false;
   }
 }
@@ -26,10 +25,10 @@ function encrypt(data) {
 /**
  * decrypt
  * @param {string} key
- * @param {string} pair
+ * @param {string} value
  * @returns
  */
-function decrpyt(key, pair) {
+function decrpyt(key, value) {
   try {
     const decipher = crypto.createDecipheriv(
       algorithm,
@@ -37,19 +36,24 @@ function decrpyt(key, pair) {
       Buffer.from(key, "hex")
     );
     const decrpyted = Buffer.concat([
-      decipher.update(Buffer.from(pair, "hex")),
+      decipher.update(Buffer.from(value, "hex")),
       decipher.final(),
     ]);
-
-    return JSON.parse(decrpyted.toString());
+    const user = JSON.parse(decrpyted.toString());
+    return user;
   } catch (error) {
-    console.log(error.message);
     return false;
   }
 }
 
-const encrypt_user = encrypt({ name: "rikian faisal", password: "r4h4514..." });
-const decrpyt_user = decrpyt(encrypt_user["key"], encrypt_user["pair"]);
+const date = new Date();
+const encrypt_user = encrypt({
+  name: "rikian faisal",
+  password: "r4h4514...",
+  create_date: `${date.getDay()}-${date.getMonth()}-${date.getFullYear()}-${date.getHours()}-${date.getMinutes()}-${date.getMilliseconds()}`,
+});
+
+const decrpyt_user = decrpyt(encrypt_user["key"], encrypt_user["value"]);
 
 console.log(encrypt_user);
 console.log(decrpyt_user);
