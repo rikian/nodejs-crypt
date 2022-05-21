@@ -1,6 +1,6 @@
 const crypto = require("crypto");
 const algorithm = "aes-256-ctr";
-const secretKey = "LMFgd664399g6H44MKH88io99DFgSH5b"; //your salt or secrect key (32 char)
+const secretKey = "LMFgd664399g6H44MKH88io99DFgSH5b"; //your salt or secrect key (32 string)
 const iv = crypto.randomBytes(16);
 
 /**
