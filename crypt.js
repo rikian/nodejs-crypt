@@ -43,6 +43,7 @@ function decrpyt(key, pair) {
 
     return JSON.parse(decrpyted.toString());
   } catch (error) {
+    console.log(error);
     return false;
   }
 }
