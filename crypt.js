@@ -18,7 +18,7 @@ function encrypt(data) {
       pair: encrypted.toString("hex"),
     };
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
     return false;
   }
 }
@@ -43,7 +43,7 @@ function decrpyt(key, pair) {
 
     return JSON.parse(decrpyted.toString());
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
     return false;
   }
 }
