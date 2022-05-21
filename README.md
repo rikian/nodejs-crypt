@@ -1,4 +1,4 @@
 - `npm install`
 - `node crypt`
 
-`by Rikian Faisal --> https://lawnsoor.com`
+By `Rikian Faisal` https://lawnsoor.com
