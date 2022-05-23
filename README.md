@@ -1,3 +1,4 @@
+- git clone `git@github.com:rikian/nodejs-crypto.git`
 - `npm install`
 - `node crypt`
 
