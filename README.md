@@ -2,12 +2,14 @@
 git clone git@github.com:rikian/nodejs-crypto.git
 ```
 ```
-npm install
+npm init -y
 ```
-create file index.js
-
+```
+touch index.js
+```
+in file index.js
 ```javascript
-const {encrypt, decrpyt} = require("crypt.js")
+const {encrypt, decrpyt} = require("./nodejs-crypto/crypt.js")
 const date = new Date();
 
 const encrypt_user = encrypt({
