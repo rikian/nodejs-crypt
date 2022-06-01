@@ -17,5 +17,6 @@ const decrpyt_user = decrpyt(encrypt_user["key"], encrypt_user["value"]);
 console.log(encrypt_user);
 console.log(decrpyt_user);
 ```
+`node index`
 
 By `Rikian Faisal` https://lawnsoor.com
