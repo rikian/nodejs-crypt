@@ -1,6 +1,10 @@
-- git clone `git@github.com:rikian/nodejs-crypto.git`
-- `npm install`
-- `create file index.js`
+```
+git clone git@github.com:rikian/nodejs-crypto.git
+```
+```
+npm install
+```
+`create file index.js`
 
 ```
 const {encrypt, decrpyt} = require("cript.js")
