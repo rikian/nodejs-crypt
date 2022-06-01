@@ -6,7 +6,7 @@ npm install
 ```
 create file index.js
 
-```
+```javascript
 const {encrypt, decrpyt} = require("crypt.js")
 const date = new Date();
 
@@ -23,6 +23,7 @@ console.log(encrypt_user);
   key: 'df6802c8a9904416e661bdd294822ddc',
   value: 'c16835d818fbb666cdaa526b5732a3ec3e1b28d9c6fbbc1aec1408cadd986a201fa6e1ada8555ee31105f1afb31e9b36e0a3c3af813960dd854169b15a02fc303550d975616c8bc234bbbe72dab33d96708c04' 
 } */
+
 console.log(decrpyt_user);
 /* {
   name: 'rikian faisal',
