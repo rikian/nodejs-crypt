@@ -7,7 +7,7 @@ npm install
 create file index.js
 
 ```
-const {encrypt, decrpyt} = require("cript.js")
+const {encrypt, decrpyt} = require("crypt.js")
 const date = new Date();
 
 const encrypt_user = encrypt({
