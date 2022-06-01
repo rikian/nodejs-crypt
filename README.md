@@ -32,6 +32,6 @@ console.log(decrpyt_user);
   create_date: '3-5-2022-21-30-179'
 } */
 ```
-`node index`
+save and run `node index`
 
 By `Rikian Faisal` https://lawnsoor.com
