@@ -7,7 +7,7 @@ npm init -y
 ```
 touch index.js
 ```
-in file index.js
+in the file index.js
 ```javascript
 const {encrypt, decrpyt} = require("./nodejs-crypto/crypt.js")
 const date = new Date();
