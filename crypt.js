@@ -45,3 +45,5 @@ function decrpyt(key, value) {
     return false;
   }
 }
+
+module.exports = {encrypt, decrpyt}
