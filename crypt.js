@@ -45,10 +45,3 @@ function decrpyt(key, value) {
     return false;
   }
 }
-
-const date = new Date();
-const encrypt_user = encrypt({
-  name: "rikian faisal",
-  password: "r4h4514...",
-  create_date: `${date.getDay()}-${date.getMonth()}-${date.getFullYear()}-${date.getHours()}-${date.getMinutes()}-${date.getMilliseconds()}`,
-});
